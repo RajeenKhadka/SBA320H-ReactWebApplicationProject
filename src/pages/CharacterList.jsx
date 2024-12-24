@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import ListDisplay from "../components/ListDisplay";
 import { useState, useEffect } from "react";
 
@@ -27,22 +28,29 @@ function CharacterList() {
   );
 
   return (
-    <div className="container">
-      <h1>Character List</h1>
-
-      {/* Search Bar */}
-      <div className="search-container">
-        <input
-          type="text"
-          className="search-bar"
-          placeholder="Search by name..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+    <div>
+      <div className="btn">
+        <Link to={"/"}>
+          <button>Home</button>
+        </Link>
       </div>
+      <div className="container">
+        <h1>Character List</h1>
 
-      {/* Display filtered characters */}
-      <ListDisplay characterList={{ results: filteredCharacters }} />
+        {/* Search Bar */}
+        <div className="search-container">
+          <input
+            type="text"
+            className="search-bar"
+            placeholder="Search by name..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+
+        {/* Display filtered characters */}
+        <ListDisplay characterList={{ results: filteredCharacters }} />
+      </div>
     </div>
   );
 }

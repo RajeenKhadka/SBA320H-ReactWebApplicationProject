@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 
 function CharacterInfo() {
   const [oneCharacter, setOneCharacter] = useState(null);
@@ -33,13 +34,23 @@ function CharacterInfo() {
 
   const loaded = () => {
     return (
-      <div>
+      <div className="character-container">
         <h2>Name: {oneCharacter.name}</h2>
-        <img src={oneCharacter.image} alt={oneCharacter.name} />
-        <p>Species: {oneCharacter.species}</p>
-        <p>Status: {oneCharacter.status}</p>
-        <p>Origin: {oneCharacter.origin.name}</p>
-        <p>Gender: {oneCharacter.gender}</p>
+        <div className="flex-character">
+          <div>
+            <img
+              className="character-img"
+              src={oneCharacter.image}
+              alt={oneCharacter.name}
+            />
+          </div>
+          <div>
+            <p>Species: {oneCharacter.species}</p>
+            <p>Status: {oneCharacter.status}</p>
+            <p>Origin: {oneCharacter.origin.name}</p>
+            <p>Gender: {oneCharacter.gender}</p>
+          </div>
+        </div>
       </div>
     );
   };
@@ -52,7 +63,16 @@ function CharacterInfo() {
     );
   };
 
-  return <div>{oneCharacter ? loaded() : loading()}</div>;
+  return (
+    <div>
+      <div className="btn">
+        <Link to={"/characterlist"}>
+          <button>Go Back To Characters</button>
+        </Link>
+      </div>
+      {oneCharacter ? loaded() : loading()}
+    </div>
+  );
 }
 
 export default CharacterInfo;
