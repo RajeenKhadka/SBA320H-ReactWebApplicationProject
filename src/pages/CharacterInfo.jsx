@@ -38,6 +38,8 @@ function CharacterInfo() {
         <img src={oneCharacter.image} alt={oneCharacter.name} />
         <p>Species: {oneCharacter.species}</p>
         <p>Status: {oneCharacter.status}</p>
+        <p>Origin: {oneCharacter.origin.name}</p>
+        <p>Gender: {oneCharacter.gender}</p>
       </div>
     );
   };

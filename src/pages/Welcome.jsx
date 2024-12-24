@@ -2,7 +2,7 @@ import { Link } from "react-router";
 function Welcome() {
   return (
     <>
-      <div className="home-container">
+      <div className="container">
         <h1>Welcome to the Rick and Morty Character Explorer!</h1>
         <p>
           Dive into the wacky, unpredictable world of Rick and Morty with our
@@ -24,7 +24,7 @@ function Welcome() {
         </p>
 
         <Link to={"/characterlist"}>
-          <button>Browse Characters</button>
+          <button className="home-btn">Browse Characters</button>
         </Link>
       </div>
     </>

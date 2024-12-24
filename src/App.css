@@ -1,10 +1,18 @@
 #root {
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 5rem;
 }
 
-.home-container {
+body {
+  background: url("./images/background.jpg");
+  background-size: cover;
+}
+
+.container {
   text-align: center;
+  font-family: "Bangers", serif;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .flex-items {
@@ -30,4 +38,33 @@ img {
 .container h4,
 p {
   margin: 0;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Style the search bar */
+.search-bar {
+  width: 300px;
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.home-btn {
+  margin-top: 50px;
+}
+
+.header-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  margin: 0 auto;
+  padding-top: 100px;
 }
