@@ -92,4 +92,11 @@ p {
   .header-img {
     width: 100%;
   }
+
+  .flex-character {
+    font-size: 2em;
+    display: block;
+
+    margin: 0 auto;
+  }
 }
